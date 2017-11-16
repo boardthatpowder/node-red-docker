@@ -1,4 +1,4 @@
-FROM hypriot/rpi-node:6
+FROM arm32v7/node:slim
 
 # add support for gpio library
 RUN apt-get update

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ $# -ne 1 ]; then
     echo $0: usage: build-rpi.sh NODE_RED_VERSION
     exit 1
@@ -26,16 +28,16 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-docker push nodered/node-red-docker:rpi
-
-if [ $? -ne 0 ]; then
-    echo "ERROR: Docker push failed for rpi image."
-    exit 1
-fi
-
-docker push nodered/node-red-docker:$NODE_RED_VERSION-rpi
-
-if [ $? -ne 0 ]; then
-    echo "ERROR: Docker push failed for rpi image."
-    exit 1
-fi
+#docker push nodered/node-red-docker:rpi
+#
+#if [ $? -ne 0 ]; then
+#    echo "ERROR: Docker push failed for rpi image."
+#    exit 1
+#fi
+#
+#docker push nodered/node-red-docker:$NODE_RED_VERSION-rpi
+#
+#if [ $? -ne 0 ]; then
+#    echo "ERROR: Docker push failed for rpi image."
+#    exit 1
+#fi
